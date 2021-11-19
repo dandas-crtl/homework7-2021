@@ -45,3 +45,22 @@ document.querySelector("#slider").addEventListener("click", function() {
 	volume.innerHTML = (val + "%");
 	console.log(video.volume);
 });
+
+document.querySelector("#mute").addEventListener("click", function() {
+	if(video.muted == false) {
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute";
+	}
+	else{
+		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute";
+	}
+});
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+});
